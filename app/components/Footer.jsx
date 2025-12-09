@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Home, Briefcase, Globe, Info, Phone, Menu, X } from "lucide-react";
+import logo from "@/assets/ProbasiCareer/ProbasiCareer-01.svg";
+import Image from "next/image";
 
 export default function Footer() {
   const navItems = [
@@ -14,18 +16,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
         <div className="flex items-center justify-between gap-6">
           {/* logo and description */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
-              PC
-            </div>
-            <div>
-              <div className="text-lg font-bold text-slate-900">
-                প্রবাসীCareer
-              </div>
-              <div className="text-sm text-slate-600">
-                Connecting talent with opportunity worldwide
-              </div>
-            </div>
+          <div className="">
+            <Image src={logo} alt="ProbasiCareer Logo" height={180} className="" />
           </div>
 
           {/* links section */}

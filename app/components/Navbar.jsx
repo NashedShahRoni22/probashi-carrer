@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Briefcase, Globe, Info, Phone, Menu, X } from "lucide-react";
-// import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,22 +38,10 @@ export default function Navbar() {
         `}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary rounded-lg blur opacity-25 group-hover:opacity-40 transition-opacity"></div>
-                <div className="relative w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
-                  <Briefcase
-                    className="text-white"
-                    size={18}
-                    strokeWidth={2.5}
-                  />
-                </div>
-              </div>
-              <span className="text-xl font-bold text-slate-900 tracking-tight">
-                প্রবাসীCareer
-              </span>
+              <Image src={logo} alt="ProbasiCareer Logo" height={100} />
             </Link>
 
             {/* Desktop Navigation */}
@@ -104,17 +93,12 @@ export default function Navbar() {
         className={`
           lg:hidden
           fixed top-0 left-0 right-0 z-50
-          transition-all duration-300 bg-white/95 backdrop-blur-md shadow-md
+          transition-all duration-300 bg-white backdrop-blur-md shadow-md
         `}
       >
         <div className="flex items-center justify-between px-4 h-16">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Briefcase className="text-white" size={16} strokeWidth={2.5} />
-            </div>
-            <span className="text-lg font-bold text-slate-900">
-              প্রবাসীCareer
-            </span>
+            <Image src={logo} alt="logo" height={60} />
           </Link>
 
           <button
